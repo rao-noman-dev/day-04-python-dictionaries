@@ -149,11 +149,17 @@ print("Students:", students)
 
 
 # Exercise 20
-# Safely retrieve a student using an ID
-student_id = int(input("Enter a student ID: "))
-student_record = students.get(student_id)
+# Safely retrieve a value by entering a dictionary key
+profile_data = {
+    "name": "Noman",
+    "course": "Python Backend",
+    "city": "Lahore",
+}
 
-if student_record is not None:
-    print("Student record:", student_record)
+dictionary_key = input("Enter a dictionary key: ").strip().lower()
+dictionary_value = profile_data.get(dictionary_key)
+
+if dictionary_value is not None:
+    print("Value:", dictionary_value)
 else:
-    print("Student not found")
+    print("Key not found")
